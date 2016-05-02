@@ -1,0 +1,10 @@
+<h1>Event Information</h1>
+
+<h3><%= @event.title %></h3>
+<p>Date: <%= @event.datetime %></p>
+<p>Address: <%= @event.address %></p>
+<p>Description: <%= @event.description %></p>
+
+<br><br><br><br>
+
+<%= link_to "RSVP", new_attendee_path %>

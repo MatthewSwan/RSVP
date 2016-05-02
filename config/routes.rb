@@ -6,8 +6,12 @@ Rails.application.routes.draw do
   root "events#index"
 
   # Example of regular route:
-  get "events", to: "events#new", as: "new_event"
-
+  get "/events", to: "events#index", as: "events"
+  get "/events/new", to: "events#new", as: "new_event"
+  post "/events", to: "events#create"
+  get "/events/:id", to: "events#show", as: "event"
+  # get "/events/:id/attendees/new", to: "attendees#new", as: "new_attendee"
+  get "attendees/new", to: "attendees#new", as: "new_attendee"
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

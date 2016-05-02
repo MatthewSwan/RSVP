@@ -1,0 +1,10 @@
+<h1>RSVP People!!</h1>
+
+<%= form_for(@attendee) do |a| %>
+  <%= a.label :name %>
+  <%= a.text_field :name %>
+  <%= a.label :rsvp %>
+  <%= a.text_field :rsvp %>
+  <%= a.submit %>
+<% end %>
+
